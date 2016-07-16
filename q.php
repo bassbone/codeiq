@@ -4,12 +4,14 @@ $num = 362880;
 
 for ($i = 10; $i < 100000; $i++) {
     $num = ltrim(multi($num, $i),'0');
-    if ($i % 1000 == 0) {
+    if ($i % 1000 === 0) {
         echo $i."\n";
     }
+/*
     if (count(array_unique(str_split(substr($num, 0, 6)))) < 2) {
         echo $i.":".substr($num, 0, 6)."\n";
     }
+*/
 }
 
 function multi($a, $b) {
