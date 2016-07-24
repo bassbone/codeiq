@@ -34,7 +34,7 @@ function calcSeven($top, $num) {
         if ($i == $top) {
 	    $cnt += calcSeven($num[0], array_slice($num, 1));
 	    if ($i == 7) {
-                $cnt += (int)(implode(array_slice($num, 1)));
+                $cnt += (int)(implode($num)) + 1;
 	    }
 	} else {
 	    $cnt += count($num) * pow(10, count($num) - 1);
